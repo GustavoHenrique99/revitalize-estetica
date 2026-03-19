@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Ana Teodoro | Estética Avançada em Ipatinga</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        offwhite: '#FAFAFA',
+                        rose: '#D98C77',
+                        brown: '#5D433A',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Configuração suave de scroll para os links âncora */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Efeito Glassmorphism (Efeito vidro) */
+        .glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(93, 67, 58, 0.05);
+        }
+
+        /* Classes para a animação de Fade-in (Controladas pelo JS) */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ocultar barra de rolagem mas permitir scroll (Estético) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAFAFA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D98C77;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5D433A;
+        }
+    </style>
+</head>
+<body class="bg-offwhite text-brown font-sans antialiased">
+
+    <header class="fixed w-full top-0 z-50 glass px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="font-serif text-2xl font-bold text-brown">Clínica Revitalize</div>
+            <a href="#contato" class="hidden md:inline-block bg-rose text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brown transition-colors duration-300">
+                Agendar Consulta
+            </a>
+        </div>
+    </header>
+
+    <section class="relative h-screen flex items-center justify-center text-center px-6 pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop" alt="Procedimento Estético" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-offwhite/80"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto fade-in">
+            <span class="text-rose font-semibold tracking-widest uppercase text-sm mb-4 block">Especialista em Estética Avançada</span>
+            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">A Ciência do Rejuvenescimento com a Precisão do Endolift</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-brown/80">Realce sua melhor versão com tecnologia de ponta e refinamento estético em Ipatinga.</p>
+            <a href="#contato" class="inline-block bg-brown text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-rose transition-colors duration-300 shadow-lg hover:shadow-xl">
+                Agendar Consulta Exclusiva
+            </a>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">O Poder do Endolift</h2>
+                <p class="text-brown/70 max-w-2xl mx-auto">Procedimento minimamente invasivo a laser que estimula a produção de colágeno e promove um lifting facial sem cortes.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl text-center fade-in hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Sem Cortes</h3>
+                    <p class="text-sm text-brown/70">Recuperação rápida, permitindo o retorno às atividades normais em pouco tempo.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl text-center fade-in hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Estímulo de Colágeno</h3>
+                    <p class="text-sm text-brown/70">Resultados progressivos que melhoram a textura e firmeza da pele mês a mês.</p>
+                </div>
+                <div class="glass p-8 rounded-3xl text-center fade-in hover:-translate-y-2 transition-transform duration-300" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.514"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Efeito Lifting</h3>
+                    <p class="text-sm text-brown/70">Redução da flacidez e gordura localizada, redefinindo os contornos da face.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-offwhite">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2 fade-in">
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop" alt="Dra. Ana Teodoro" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 fade-in">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6">Dra. Ana Teodoro</h2>
+                <p class="text-lg text-brown/80 mb-6 leading-relaxed">
+                    Com excelência e precisão técnica, a Dra. Ana Teodoro dedica-se a realçar a beleza natural de cada paciente. Especialista em Harmonização Facial e tecnologias de ponta como o Endolift.
+                </p>
+                <p class="text-lg text-brown/80 mb-8 leading-relaxed">
+                    Na Clínica Revitalize, unimos ciência, arte e empatia para entregar resultados elegantes, duradouros e que elevam a sua autoestima.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-brown font-medium">
+                        <span class="w-2 h-2 bg-rose rounded-full mr-3"></span> Especialista em Estética Avançada
+                    </li>
+                    <li class="flex items-center text-brown font-medium">
+                        <span class="w-2 h-2 bg-rose rounded-full mr-3"></span> Foco em Resultados Naturais
+                    </li>
+                    <li class="flex items-center text-brown font-medium">
+                        <span class="w-2 h-2 bg-rose rounded-full mr-3"></span> Atendimento Exclusivo em Ipatinga
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Portfólio de Serviços</h2>
+                <p class="text-brown/70 max-w-2xl mx-auto">Tratamentos personalizados para as suas necessidades exclusivas.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-3xl fade-in aspect-square">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2070&auto=format&fit=crop" alt="Harmonização Facial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brown/90 via-brown/40 to-transparent flex flex-col justify-end p-8">
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">Harmonização Facial</h3>
+                        <p class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Equilíbrio e proporção para realçar seus traços naturais com ácido hialurônico e toxina botulínica.</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl fade-in aspect-square" style="transition-delay: 100ms;">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2070&auto=format&fit=crop" alt="Bioestimuladores" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brown/90 via-brown/40 to-transparent flex flex-col justify-end p-8">
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">Bioestimuladores</h3>
+                        <p class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Estímulo profundo de colágeno para combater a flacidez e devolver a firmeza da pele facial e corporal.</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl fade-in aspect-square" style="transition-delay: 200ms;">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop" alt="Tecnologias de Rejuvenescimento" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brown/90 via-brown/40 to-transparent flex flex-col justify-end p-8">
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">Tecnologias a Laser</h3>
+                        <p class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Protocolos avançados como o Endolift e Ultraformer para rejuvenescimento sem cirurgia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-brown text-offwhite py-16 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 fade-in">
+            <div>
+                <h3 class="font-serif text-2xl font-bold mb-6 text-rose">Clínica Revitalize</h3>
+                <p class="text-offwhite/70 mb-6">Realçando a sua melhor versão com tecnologia, segurança e sofisticação.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-offwhite/10 flex items-center justify-center hover:bg-rose transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-offwhite/10 flex items-center justify-center hover:bg-rose transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.822a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-serif text-xl font-bold mb-6">Contato</h4>
+                <ul class="space-y-4 text-offwhite/70">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-rose mr-3 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span>Ipatinga - MG<br>Bairro Nobre, Sala 402</span>
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-rose mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span>(31) 99999-9999</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-xl font-bold mb-6">Pronta para a sua transformação?</h4>
+                <a href="#" class="block text-center bg-rose text-white px-6 py-3 rounded-full font-medium hover:bg-offwhite hover:text-brown transition-colors duration-300 w-full">
+                    Fale conosco no WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto border-t border-offwhite/10 mt-12 pt-8 text-center text-sm text-offwhite/50 fade-in">
+            &copy; 2026 Clínica Revitalize - Dra. Ana Teodoro. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Seleciona todos os elementos com a classe .fade-in
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            // Configura o observador
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // Dispara quando 15% do elemento estiver visível
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Adiciona a classe que ativa a animação CSS
+                        entry.target.classList.add('is-visible');
+                        // Para de observar o elemento após a animação acontecer uma vez
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Inicia a observação para cada elemento
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

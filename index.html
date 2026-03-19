@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Ana Teodoro | Estética Avançada e Regenerativa</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ================= Variáveis de Cores e Padrões ================= */
+        :root {
+            --primary: #D98C77; /* Terracota / Salmão */
+            --secondary: #5D433A; /* Marrom Luxo */
+            --bg-light: #FAFAFA; /* Branco Gelo / Off-white */
+            --text-dark: #2C1E16; /* Quase preto para leitura */
+            --white: #FFFFFF;
+            --transition: all 0.4s ease;
+        }
+
+        /* ================= Reset de Engenharia ================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ================= Animações Fade-in (Scroll) ================= */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= Header Minimalista & Glassmorphism ================= */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 250, 250, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(93, 67, 58, 0.1);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Substitua o texto abaixo pela tag <img> da logo dela quando tiver o link */
+        .logo-img-placeholder {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        .btn-glass {
+            background: rgba(217, 140, 119, 0.15);
+            border: 1px solid rgba(217, 140, 119, 0.3);
+            color: var(--secondary);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            backdrop-filter: blur(5px);
+            transition: var(--transition);
+        }
+
+        .btn-glass:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* ================= Hero Section (Dobra 1) ================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 5% 60px;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+            max-width: 90%;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 3px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(93, 67, 58, 0.15);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(217, 140, 119, 0.3);
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        /* Container para a foto dela */
+        .img-wrapper {
+            width: 100%;
+            height: 600px;
+            background-color: #E8E8E8; /* Placeholder */
+            background-image: url(img/foto-jaleco.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 100px 0 100px; /* Toque moderno de design */
+            box-shadow: -20px 20px 0px rgba(217, 140, 119, 0.2);
+        }
+
+        /* ================= Destaque Técnico (Endolift) ================= */
+        .procedure {
+            padding: 6rem 5%;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+
+        .endolift-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .endolift-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .endolift-content p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .benefits-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .benefits-list li::before {
+            content: "✓";
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .endolift-img {
+            width: 100%;
+            height: 500px;
+            background-color: #E8E8E8; /* Placeholder */
+            background-image: url('COLE_A_FOTO_DO_PROCEDIMENTO_AQUI');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ================= Sobre a Especialista ================= */
+        .about {
+            padding: 6rem 5%;
+            background-color: var(--secondary);
+            color: var(--white);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about h2 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 500px;
+            background-color: #3A2A24; /* Placeholder Escuro */
+            background-image: url('COLE_OUTRA_FOTO_DELA_AQUI');
+            background-size: cover;
+            background-position: center top;
+            border: 10px solid var(--white);
+        }
+
+        /* ================= Rodapé ================= */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--bg-light);
+            padding: 4rem 5% 2rem;
+            text-align: center;
+        }
+
+        .footer-content h3 {
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-content p {
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        /* ================= Responsividade (Mobile First) ================= */
+        @media (max-width: 900px) {
+            .hero, .endolift-grid, .about {
+                flex-direction: column;
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero {
+                padding-top: 150px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text p {
+                max-width: 100%;
+                margin: 0 auto 2rem;
+            }
+
+            .img-wrapper, .endolift-img, .about-img {
+                height: 400px;
+                border-radius: 0;
+            }
+
+            .benefits-list li {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-img-placeholder">A</div>
+            Dra. Ana Teodoro
+        </a>
+        <a href="#" class="btn-glass">Fale Conosco</a>
+    </header>
+
+    <section class="hero fade-in">
+        <div class="hero-text">
+            <h1>A Ciência do Rejuvenescimento com a Precisão do Endolift</h1>
+            <p>Tecnologia de ponta e refinamento estético para realçar a sua melhor versão em Ipatinga, sem cortes e sem dores.</p>
+            <a href="#" class="btn-primary">Agendar Consulta Exclusiva</a>
+        </div>
+        <div class="hero-image">
+            <div class="img-wrapper"></div>
+        </div>
+    </section>
+
+    <section class="procedure">
+        <div class="section-header fade-in">
+            <p>Tratamentos de Elite</p>
+            <h2>O procedimento ideal para você</h2>
+        </div>
+        
+        <div class="endolift-grid fade-in">
+            <div class="endolift-img"></div>
+            <div class="endolift-content">
+                <h3>Endolift: Inovação e Resultados</h3>
+                <p>O Endolift é a solução eficaz e minimamente invasiva para quem busca resolver problemas estéticos sem a necessidade de cirurgia. Utilizamos tecnologia a laser subdérmico atuando diretamente nas áreas problemáticas.</p>
+                <p>Ideal para redefinir contornos e restaurar a firmeza da pele com resultados visíveis e duradouros.</p>
+                
+                <ul class="benefits-list">
+                    <li>Tratamento de Gordura Localizada</li>
+                    <li>Combate à Flacidez e Papada</li>
+                    <li>Sem cortes, cicatrizes ou pós-operatório longo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="about fade-in">
+        <div class="about-content">
+            <h2>Sobre Ana Teodoro</h2>
+            <p>Com anos de experiência em saúde estética, sou apaixonada por entregar não apenas resultados visuais, mas devolver a autoestima através de protocolos individualizados.</p>
+            <p>Ao longo da minha trajetória, aliei os melhores tratamentos à alta tecnologia (como o Endolift) para garantir máxima segurança e eficácia em cada procedimento.</p>
+            <p>Cada atendimento é pensado de forma exclusiva para a necessidade do seu corpo e rosto.</p>
+        </div>
+        <div class="about-img"></div>
+    </section>
+
+    <footer>
+        <div class="footer-content fade-in">
+            <h3>Pronta para alcançar sua melhor versão?</h3>
+            <p>Rua Jequitibá, 516 - Horto, Ipatinga/MG</p>
+            <p>Telefone: (31) 3830-1030</p>
+            <br>
+            <a href="#" class="btn-primary" style="background: var(--primary);">Agendar Agora</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Clínica Dra. Ana Teodoro. Todos os direitos reservados.</p>
+            <p>Desenvolvido com engenharia de performance por Momentum Digital.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

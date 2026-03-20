@@ -13,6 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -43,19 +45,6 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.4);
             box-shadow: 0 8px 32px 0 rgba(93, 67, 58, 0.05);
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            will-change: opacity, transform;
-            /* Otimização de renderização */
-        }
-
-        .fade-in.is-visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         ::-webkit-scrollbar {
@@ -127,7 +116,7 @@
             <div class="absolute inset-0 bg-offwhite/75"></div>
         </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto fade-in">
+        <div class="relative z-10 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
             <span class="text-rose font-semibold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4 block">Especialista em Estética
                 Avançada</span>
             <h1 class="font-serif text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">Descubra o método que transformou o
@@ -143,7 +132,7 @@
 
     <section class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Seu corpo já não é mais o mesmo há tempos?
                 </h2>
                 <p class="text-brown/70 max-w-2xl mx-auto">Esses desafios podem afetar não apenas sua aparência, mas
@@ -151,7 +140,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl text-center fade-in">
+                <div class="glass p-8 rounded-3xl text-center" data-aos="fade-up" data-aos-delay="100">
                     <div
                         class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,7 +152,7 @@
                     <p class="text-sm text-brown/70">Gordura teimosa que parece impossível de eliminar e sobrepeso que
                         afeta sua energia e disposição no dia a dia.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl text-center fade-in">
+                <div class="glass p-8 rounded-3xl text-center" data-aos="fade-up" data-aos-delay="200">
                     <div
                         class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,7 +164,7 @@
                     <p class="text-sm text-brown/70">Flacidez que traz insegurança ao vestir suas roupas favoritas e a
                         dificuldade em encontrar looks que te valorizem.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl text-center fade-in">
+                <div class="glass p-8 rounded-3xl text-center" data-aos="fade-up" data-aos-delay="300">
                     <div
                         class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,13 +183,13 @@
 
     <section id="sobre" class="py-20 px-6 bg-offwhite">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div class="w-full md:w-1/2 fade-in">
+            <div class="w-full md:w-1/2" data-aos="fade-right">
                 <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-brown/10">
                     <img src="img/fotorev.webp" alt="Dra. Ana Teodoro" loading="lazy"
                         class="w-full h-full object-cover object-top">
                 </div>
             </div>
-            <div class="w-full md:w-1/2 fade-in">
+            <div class="w-full md:w-1/2" data-aos="fade-left">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6">Sobre mim: Ana Teodoro</h2>
                 <p class="text-lg text-brown/80 mb-6 leading-relaxed">
                     Sou Biomédica e atuo na área de estética avançada. Com anos de dedicação focados no desenvolvimento
@@ -228,25 +217,25 @@
 
     <section id="resultados" class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Veja os Nossos Resultados</h2>
                 <p class="text-brown/70 max-w-2xl mx-auto">Acompanhe a evolução real e a transformação corporal de
                     nossas pacientes.</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
+                <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
                     <img src="https://images.pexels.com/photos/3985324/pexels-photo-3985324.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Estética" loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
+                <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
                     <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bem estar" loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
+                <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
                     <img src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cuidado" loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
+                <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
                     <img src="https://images.pexels.com/photos/3985299/pexels-photo-3985299.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Clínica" loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
@@ -256,7 +245,7 @@
 
     <section id="tratamentos" class="py-20 px-6 bg-offwhite">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16 fade-in">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Tratamentos personalizados para realçar a sua
                     beleza</h2>
                 <p class="text-brown/70 max-w-2xl mx-auto">Soluções inovadoras e seguras para tratar gordura localizada
@@ -264,7 +253,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
+                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10" data-aos="fade-up" data-aos-delay="100">
                     <img src="https://images.pexels.com/photos/3985330/pexels-photo-3985330.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tecnologia" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
@@ -276,7 +265,7 @@
                             papada e flacidez.</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
+                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10" data-aos="fade-up" data-aos-delay="200">
                     <img src="https://images.pexels.com/photos/3762467/pexels-photo-3762467.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Natureza e Spa" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
@@ -288,7 +277,7 @@
                             corporal.</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
+                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10" data-aos="fade-up" data-aos-delay="300">
                     <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Luxo" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
@@ -305,7 +294,7 @@
     </section>
 
     <footer id="contato" class="bg-brown text-offwhite py-16 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 fade-in">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12" data-aos="fade-up">
             <div>
                 <h3 class="font-serif text-2xl font-bold mb-6 text-rose">Clínica Revitalize</h3>
                 <p class="text-offwhite/70 mb-6">Realçando a sua melhor versão com tecnologia, segurança e sofisticação.
@@ -367,29 +356,17 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Controle do Fade-in de Elementos
-            const fadeElements = document.querySelectorAll('.fade-in');
-
-            if ('IntersectionObserver' in window) {
-                const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
-                const observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            requestAnimationFrame(() => {
-                                entry.target.classList.add('is-visible');
-                            });
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, observerOptions);
-
-                fadeElements.forEach(element => observer.observe(element));
-            } else {
-                // Fallback para navegadores antigos
-                fadeElements.forEach(el => el.classList.add('is-visible'));
-            }
+            
+            // Inicializando o AOS no lugar do observador antigo
+            AOS.init({
+                once: true,
+                offset: 100,
+                duration: 800,
+            });
 
             // Controle do Menu Mobile
             const mobileBtn = document.getElementById('mobile-btn');

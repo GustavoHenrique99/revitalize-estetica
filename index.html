@@ -50,7 +50,6 @@
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
             will-change: opacity, transform;
-            /* Otimização de renderização */
         }
 
         .fade-in.is-visible {
@@ -81,7 +80,9 @@
 
     <header class="fixed w-full top-0 z-50 glass px-6 py-3">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <img src="img/logo-revitalize.png" alt="Logo Clínica Revitalize" class="h-12 w-auto object-contain">
+            <a href="#" class="hover:opacity-80 transition-opacity">
+                <img src="img/logo-revitalize.png" alt="Logo Clínica Revitalize" class="h-12 w-auto object-contain">
+            </a>
 
             <nav class="hidden md:flex space-x-8 font-medium text-brown/80">
                 <a href="#sobre" class="hover:text-rose transition-colors">Sobre Mim</a>
@@ -118,7 +119,7 @@
         </nav>
     </div>
 
-    <section class="relative min-h-screen flex items-center justify-center text-center px-4 md:px-6 pt-28 pb-10 md:pt-20 md:pb-0">
+    <section class="relative h-screen flex items-center justify-center text-center px-4 md:px-6 pt-28 pb-10 md:pt-20 md:pb-0">
         <div class="absolute inset-0 z-0 bg-brown/20">
             <img src="img/hero-clinica.webp" alt="Interior de Clínica de Estética Premium - Clínica Revitalize"
                 class="w-full h-full object-cover" />
@@ -233,19 +234,19 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
-                    <img src="FOTO-ANTES-DEPOIS-1.webp" alt="Resultado 1" loading="lazy"
+                    <img src="https://images.pexels.com/photos/3985324/pexels-photo-3985324.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Estética" loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
                 <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
-                    <img src="FOTO-ANTES-DEPOIS-2.webp" alt="Resultado 2" loading="lazy"
+                    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bem estar" loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
                 <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
-                    <img src="FOTO-ANTES-DEPOIS-3.webp" alt="Resultado 3" loading="lazy"
+                    <img src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cuidado" loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
                 <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
-                    <img src="FOTO-ANTES-DEPOIS-4.webp" alt="Resultado 4" loading="lazy"
+                    <img src="https://images.pexels.com/photos/3985299/pexels-photo-3985299.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Clínica" loading="lazy"
                         class="w-full h-full object-cover">
                 </div>
             </div>
@@ -263,7 +264,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
-                    <img src="IMAGEM-HARMONIZACAO.webp" alt="Endolift" loading="lazy"
+                    <img src="https://images.pexels.com/photos/3985330/pexels-photo-3985330.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tecnologia" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
@@ -275,7 +276,7 @@
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
-                    <img src="IMAGEM-BIOESTIMULADORES.webp" alt="Bioestimuladores" loading="lazy"
+                    <img src="https://images.pexels.com/photos/3762467/pexels-photo-3762467.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Natureza e Spa" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
@@ -287,7 +288,7 @@
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
-                    <img src="IMAGEM-TECNOLOGIAS.webp" alt="Harmonização e Preenchedores" loading="lazy"
+                    <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Luxo" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
@@ -389,7 +390,7 @@
                 fadeElements.forEach(el => el.classList.add('is-visible'));
             }
 
-            // Controle do Menu Mobile (Nova Inserção)
+            // Controle do Menu Mobile
             const mobileBtn = document.getElementById('mobile-btn');
             const closeBtn = document.getElementById('close-btn');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -399,14 +400,14 @@
                 mobileMenu.classList.toggle('opacity-0');
                 mobileMenu.classList.toggle('pointer-events-none');
                 mobileMenu.classList.toggle('-translate-y-full');
-                document.body.classList.toggle('overflow-hidden'); // Evita rolagem de tela com o menu aberto
+                document.body.classList.toggle('overflow-hidden');
             }
 
             mobileBtn.addEventListener('click', toggleMenu);
             closeBtn.addEventListener('click', toggleMenu);
 
             mobileLinks.forEach(link => {
-                link.addEventListener('click', toggleMenu); // Fecha menu ao clicar num link
+                link.addEventListener('click', toggleMenu);
             });
         });
     </script>

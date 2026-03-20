@@ -118,7 +118,7 @@
         </nav>
     </div>
 
-    <section class="relative h-screen flex items-center justify-center text-center px-6 pt-20">
+    <section class="relative min-h-screen flex items-center justify-center text-center px-4 md:px-6 pt-28 pb-10 md:pt-20 md:pb-0">
         <div class="absolute inset-0 z-0 bg-brown/20">
             <img src="img/hero-clinica.webp" alt="Interior de Clínica de Estética Premium - Clínica Revitalize"
                 class="w-full h-full object-cover" />
@@ -126,14 +126,14 @@
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto fade-in">
-            <span class="text-rose font-semibold tracking-widest uppercase text-sm mb-4 block">Especialista em Estética
+            <span class="text-rose font-semibold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4 block">Especialista em Estética
                 Avançada</span>
-            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">Descubra o método que transformou o
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">Descubra o método que transformou o
                 corpo das minhas pacientes em poucas sessões, sem dor e sem cortes.</h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-brown/90 font-medium">Perfeito para quem deseja
+            <p class="text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto text-brown/90 font-medium px-2 md:px-0">Perfeito para quem deseja
                 perder peso, eliminar a papada, diminuir flacidez e gordura localizada.</p>
             <a href="#contato"
-                class="inline-block bg-brown text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-rose transition-colors duration-300 shadow-lg">
+                class="inline-block bg-brown text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-medium hover:bg-rose transition-colors duration-300 shadow-lg">
                 AGENDAR AVALIAÇÃO
             </a>
         </div>
@@ -385,6 +385,7 @@
 
                 fadeElements.forEach(element => observer.observe(element));
             } else {
+                // Fallback para navegadores antigos
                 fadeElements.forEach(el => el.classList.add('is-visible'));
             }
 

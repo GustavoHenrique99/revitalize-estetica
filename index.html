@@ -94,8 +94,29 @@
                 class="hidden lg:inline-block bg-rose text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brown transition-colors duration-300">
                 Agendar Consulta
             </a>
+
+            <button id="mobile-btn" class="md:hidden text-brown focus:outline-none p-2" aria-label="Abrir menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
     </header>
+
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-offwhite/95 backdrop-blur-xl flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 ease-in-out transform -translate-y-full">
+        <button id="close-btn" class="absolute top-6 right-6 text-brown focus:outline-none p-2" aria-label="Fechar menu">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <nav class="flex flex-col space-y-8 text-center">
+            <a href="#sobre" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Sobre Mim</a>
+            <a href="#tratamentos" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Tratamentos</a>
+            <a href="#resultados" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Resultados</a>
+            <a href="#contato" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Contato</a>
+            <a href="#contato" class="mobile-link mt-8 inline-block bg-rose text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">Agendar Consulta</a>
+        </nav>
+    </div>
 
     <section class="relative h-screen flex items-center justify-center text-center px-6 pt-20">
         <div class="absolute inset-0 z-0 bg-brown/20">
@@ -346,9 +367,9 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Controle do Fade-in de Elementos
             const fadeElements = document.querySelectorAll('.fade-in');
 
-            // Intersection Observer com otimização
             if ('IntersectionObserver' in window) {
                 const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
                 const observer = new IntersectionObserver((entries, observer) => {
@@ -364,9 +385,28 @@
 
                 fadeElements.forEach(element => observer.observe(element));
             } else {
-                // Fallback para navegadores antigos
                 fadeElements.forEach(el => el.classList.add('is-visible'));
             }
+
+            // Controle do Menu Mobile (Nova Inserção)
+            const mobileBtn = document.getElementById('mobile-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('opacity-0');
+                mobileMenu.classList.toggle('pointer-events-none');
+                mobileMenu.classList.toggle('-translate-y-full');
+                document.body.classList.toggle('overflow-hidden'); // Evita rolagem de tela com o menu aberto
+            }
+
+            mobileBtn.addEventListener('click', toggleMenu);
+            closeBtn.addEventListener('click', toggleMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu); // Fecha menu ao clicar num link
+            });
         });
     </script>
 </body>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Clínica Revitalize - Especialista em Estética Avançada e Endolift em Ipatinga.">
     <title>Dra. Ana Teodoro | Estética Avançada</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -30,8 +33,10 @@
     </script>
 
     <style>
-        html { scroll-behavior: smooth; }
-        
+        html {
+            scroll-behavior: smooth;
+        }
+
         .glass {
             background: rgba(255, 255, 255, 0.65);
             backdrop-filter: blur(12px);
@@ -44,25 +49,49 @@
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            will-change: opacity, transform; /* Otimização de renderização */
+            will-change: opacity, transform;
+            /* Otimização de renderização */
         }
+
         .fade-in.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #FAFAFA; }
-        ::-webkit-scrollbar-thumb { background: #D98C77; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #5D433A; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FAFAFA;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D98C77;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5D433A;
+        }
     </style>
 </head>
+
 <body class="bg-offwhite text-brown font-sans antialiased overflow-x-hidden">
 
-    <header class="fixed w-full top-0 z-50 glass px-6 py-4">
+    <header class="fixed w-full top-0 z-50 glass px-6 py-3">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="font-serif text-2xl font-bold text-brown">Clínica Revitalize</div>
-            <a href="#contato" class="hidden md:inline-block bg-rose text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brown transition-colors duration-300">
+            <img src="img/logo-revitalize.png" alt="Logo Clínica Revitalize" class="h-12 w-auto object-contain">
+
+            <nav class="hidden md:flex space-x-8 font-medium text-brown/80">
+                <a href="#sobre" class="hover:text-rose transition-colors">Sobre Mim</a>
+                <a href="#tratamentos" class="hover:text-rose transition-colors">Tratamentos</a>
+                <a href="#resultados" class="hover:text-rose transition-colors">Resultados</a>
+                <a href="#contato" class="hover:text-rose transition-colors">Contato</a>
+            </nav>
+
+            <a href="#contato"
+                class="hidden lg:inline-block bg-rose text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brown transition-colors duration-300">
                 Agendar Consulta
             </a>
         </div>
@@ -70,20 +99,20 @@
 
     <section class="relative h-screen flex items-center justify-center text-center px-6 pt-20">
         <div class="absolute inset-0 z-0 bg-brown/20">
-            <img 
-                src="COLOQUE-O-CAMINHO-DA-IMAGEM-HERO-AQUI.webp" 
-                alt="Clínica Revitalize - Procedimento Estético" 
-                fetchpriority="high"
-                class="w-full h-full object-cover" 
-            />
-            <div class="absolute inset-0 bg-offwhite/80"></div>
+            <img src="img/hero-clinica.webp" alt="Interior de Clínica de Estética Premium - Clínica Revitalize"
+                class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-offwhite/75"></div>
         </div>
-        
+
         <div class="relative z-10 max-w-4xl mx-auto fade-in">
-            <span class="text-rose font-semibold tracking-widest uppercase text-sm mb-4 block">Especialista em Estética Avançada</span>
-            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">Descubra o método que transformou o corpo das minhas pacientes em poucas sessões, sem dor e sem cortes.</h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-brown/80">Perfeito para quem deseja perder peso, eliminar a papada, diminuir flacidez e gordura localizada.</p>
-            <a href="#contato" class="inline-block bg-brown text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-rose transition-colors duration-300 shadow-lg">
+            <span class="text-rose font-semibold tracking-widest uppercase text-sm mb-4 block">Especialista em Estética
+                Avançada</span>
+            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">Descubra o método que transformou o
+                corpo das minhas pacientes em poucas sessões, sem dor e sem cortes.</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-brown/90 font-medium">Perfeito para quem deseja
+                perder peso, eliminar a papada, diminuir flacidez e gordura localizada.</p>
+            <a href="#contato"
+                class="inline-block bg-brown text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-rose transition-colors duration-300 shadow-lg">
                 AGENDAR AVALIAÇÃO
             </a>
         </div>
@@ -92,55 +121,72 @@
     <section class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16 fade-in">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Seu corpo já não é mais o mesmo há tempos?</h2>
-                <p class="text-brown/70 max-w-2xl mx-auto">Esses desafios podem afetar não apenas sua aparência, mas também sua autoestima e bem-estar. Veja se você se identifica com algum desses pontos:</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Seu corpo já não é mais o mesmo há tempos?
+                </h2>
+                <p class="text-brown/70 max-w-2xl mx-auto">Esses desafios podem afetar não apenas sua aparência, mas
+                    também sua autoestima e bem-estar. Veja se você se identifica com algum desses pontos:</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="glass p-8 rounded-3xl text-center fade-in">
-                    <div class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <div
+                        class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="font-serif text-xl font-bold mb-3">Gordura Localizada</h3>
-                    <p class="text-sm text-brown/70">Gordura teimosa que parece impossível de eliminar e sobrepeso que afeta sua energia e disposição no dia a dia.</p>
+                    <p class="text-sm text-brown/70">Gordura teimosa que parece impossível de eliminar e sobrepeso que
+                        afeta sua energia e disposição no dia a dia.</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center fade-in">
-                    <div class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div
+                        class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
                     </div>
                     <h3 class="font-serif text-xl font-bold mb-3">Flacidez e Insegurança</h3>
-                    <p class="text-sm text-brown/70">Flacidez que traz insegurança ao vestir suas roupas favoritas e a dificuldade em encontrar looks que te valorizem.</p>
+                    <p class="text-sm text-brown/70">Flacidez que traz insegurança ao vestir suas roupas favoritas e a
+                        dificuldade em encontrar looks que te valorizem.</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center fade-in">
-                    <div class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.514"></path></svg>
+                    <div
+                        class="w-16 h-16 mx-auto bg-rose/10 text-rose rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.514">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="font-serif text-xl font-bold mb-3">Frustração</h3>
-                    <p class="text-sm text-brown/70">Sentimentos de desânimo ao tentar diferentes dietas e exercícios sem resultados e não reconhecer a mulher no espelho.</p>
+                    <p class="text-sm text-brown/70">Sentimentos de desânimo ao tentar diferentes dietas e exercícios
+                        sem resultados e não reconhecer a mulher no espelho.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-offwhite">
+    <section id="sobre" class="py-20 px-6 bg-offwhite">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 fade-in">
                 <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-brown/10">
-                    <img 
-                        src="COLOQUE-A-FOTO-DA-DRA-AQUI.webp" 
-                        alt="Dra. Ana Teodoro" 
-                        loading="lazy"
-                        class="w-full h-full object-cover"
-                    >
+                    <img src="img/fotorev.webp" alt="Dra. Ana Teodoro" loading="lazy"
+                        class="w-full h-full object-cover object-top">
                 </div>
             </div>
             <div class="w-full md:w-1/2 fade-in">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6">Sobre mim: Ana Teodoro</h2>
                 <p class="text-lg text-brown/80 mb-6 leading-relaxed">
-                    Sou Biomédica e atuo na área de estética avançada. Com anos de dedicação focados no desenvolvimento de tratamentos faciais e corporais, meu propósito é transformar a forma como você se vê.
+                    Sou Biomédica e atuo na área de estética avançada. Com anos de dedicação focados no desenvolvimento
+                    de tratamentos faciais e corporais, meu propósito é transformar a forma como você se vê.
                 </p>
                 <p class="text-lg text-brown/80 mb-8 leading-relaxed">
-                    Ao longo da minha trajetória, desenvolvi protocolos exclusivos para tratar a flacidez e a gordura localizada de forma eficaz, ajudando mulheres a recuperarem a autoestima com segurança e resultados visíveis.
+                    Ao longo da minha trajetória, desenvolvi protocolos exclusivos para tratar a flacidez e a gordura
+                    localizada de forma eficaz, ajudando mulheres a recuperarem a autoestima com segurança e resultados
+                    visíveis.
                 </p>
                 <ul class="space-y-4 mb-8">
                     <li class="flex items-center text-brown font-medium">
@@ -157,71 +203,78 @@
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-white">
+    <section id="resultados" class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16 fade-in">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Veja os Nossos Resultados</h2>
-                <p class="text-brown/70 max-w-2xl mx-auto">Acompanhe a evolução real e a transformação corporal de nossas pacientes.</p>
+                <p class="text-brown/70 max-w-2xl mx-auto">Acompanhe a evolução real e a transformação corporal de
+                    nossas pacientes.</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
-                     <img src="FOTO-ANTES-DEPOIS-1.webp" alt="Resultado 1" loading="lazy" class="w-full h-full object-cover">
+                    <img src="FOTO-ANTES-DEPOIS-1.webp" alt="Resultado 1" loading="lazy"
+                        class="w-full h-full object-cover">
                 </div>
                 <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
-                     <img src="FOTO-ANTES-DEPOIS-2.webp" alt="Resultado 2" loading="lazy" class="w-full h-full object-cover">
+                    <img src="FOTO-ANTES-DEPOIS-2.webp" alt="Resultado 2" loading="lazy"
+                        class="w-full h-full object-cover">
                 </div>
                 <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
-                     <img src="FOTO-ANTES-DEPOIS-3.webp" alt="Resultado 3" loading="lazy" class="w-full h-full object-cover">
+                    <img src="FOTO-ANTES-DEPOIS-3.webp" alt="Resultado 3" loading="lazy"
+                        class="w-full h-full object-cover">
                 </div>
                 <div class="aspect-square bg-brown/10 rounded-2xl overflow-hidden fade-in">
-                     <img src="FOTO-ANTES-DEPOIS-4.webp" alt="Resultado 4" loading="lazy" class="w-full h-full object-cover">
+                    <img src="FOTO-ANTES-DEPOIS-4.webp" alt="Resultado 4" loading="lazy"
+                        class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-offwhite">
+    <section id="tratamentos" class="py-20 px-6 bg-offwhite">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16 fade-in">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Tratamentos personalizados para realçar a sua beleza</h2>
-                <p class="text-brown/70 max-w-2xl mx-auto">Soluções inovadoras e seguras para tratar gordura localizada e flacidez.</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Tratamentos personalizados para realçar a sua
+                    beleza</h2>
+                <p class="text-brown/70 max-w-2xl mx-auto">Soluções inovadoras e seguras para tratar gordura localizada
+                    e flacidez.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
-                    <img 
-                        src="IMAGEM-HARMONIZACAO.webp" 
-                        alt="Endolift" 
-                        loading="lazy"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    >
-                    <div class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
+                    <img src="IMAGEM-HARMONIZACAO.webp" alt="Endolift" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
                         <h3 class="font-serif text-2xl font-bold text-white mb-2">Endolift</h3>
-                        <p class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">O procedimento minimamente invasivo ideal para resolver problemas de gordura localizada, papada e flacidez.</p>
+                        <p
+                            class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            O procedimento minimamente invasivo ideal para resolver problemas de gordura localizada,
+                            papada e flacidez.</p>
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
-                    <img 
-                        src="IMAGEM-BIOESTIMULADORES.webp" 
-                        alt="Bioestimuladores" 
-                        loading="lazy"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    >
-                    <div class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
+                    <img src="IMAGEM-BIOESTIMULADORES.webp" alt="Bioestimuladores" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
                         <h3 class="font-serif text-2xl font-bold text-white mb-2">Bioestimuladores</h3>
-                        <p class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Estímulo profundo de colágeno para combater a flacidez e devolver a firmeza da pele facial e corporal.</p>
+                        <p
+                            class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Estímulo profundo de colágeno para combater a flacidez e devolver a firmeza da pele facial e
+                            corporal.</p>
                     </div>
                 </div>
                 <div class="group relative overflow-hidden rounded-3xl fade-in aspect-[4/5] bg-brown/10">
-                    <img 
-                        src="IMAGEM-TECNOLOGIAS.webp" 
-                        alt="Harmonização e Preenchedores" 
-                        loading="lazy"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    >
-                    <div class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
+                    <img src="IMAGEM-TECNOLOGIAS.webp" alt="Harmonização e Preenchedores" loading="lazy"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
                         <h3 class="font-serif text-2xl font-bold text-white mb-2">Procedimentos Estéticos</h3>
-                        <p class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Seja através de harmonização facial ou outros tratamentos modernos para uma aparência satisfatória.</p>
+                        <p
+                            class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Seja através de harmonização facial ou outros tratamentos modernos para uma aparência
+                            satisfatória.</p>
                     </div>
                 </div>
             </div>
@@ -232,23 +285,47 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 fade-in">
             <div>
                 <h3 class="font-serif text-2xl font-bold mb-6 text-rose">Clínica Revitalize</h3>
-                <p class="text-offwhite/70 mb-6">Realçando a sua melhor versão com tecnologia, segurança e sofisticação.</p>
+                <p class="text-offwhite/70 mb-6">Realçando a sua melhor versão com tecnologia, segurança e sofisticação.
+                </p>
                 <div class="flex space-x-4">
-                    <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-offwhite/10 flex items-center justify-center hover:bg-rose transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.822a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z"/></svg>
+                    <a href="#" aria-label="Instagram"
+                        class="w-10 h-10 rounded-full bg-offwhite/10 flex items-center justify-center hover:bg-rose transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.822a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook"
+                        class="w-10 h-10 rounded-full bg-offwhite/10 flex items-center justify-center hover:bg-rose transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
                     </a>
                 </div>
             </div>
-            
+
             <div>
                 <h4 class="font-serif text-xl font-bold mb-6">Contato</h4>
                 <ul class="space-y-4 text-offwhite/70">
                     <li class="flex items-start">
-                        <svg class="w-5 h-5 text-rose mr-3 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <svg class="w-5 h-5 text-rose mr-3 mt-1 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
                         <span>Ipatinga - MG<br>Rua Jequitibá, 516 - Horto</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-5 h-5 text-rose mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <svg class="w-5 h-5 text-rose mr-3 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
                         <span>(31) 98301-6381</span>
                     </li>
                 </ul>
@@ -256,7 +333,8 @@
 
             <div>
                 <h4 class="font-serif text-xl font-bold mb-6">Pronta para alcançar sua melhor versão?</h4>
-                <a href="#" class="block text-center bg-rose text-white px-6 py-3 rounded-full font-medium hover:bg-offwhite hover:text-brown transition-colors duration-300 w-full">
+                <a href="#"
+                    class="block text-center bg-rose text-white px-6 py-3 rounded-full font-medium hover:bg-offwhite hover:text-brown transition-colors duration-300 w-full">
                     Fale conosco no WhatsApp
                 </a>
             </div>
@@ -267,9 +345,9 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const fadeElements = document.querySelectorAll('.fade-in');
-            
+
             // Intersection Observer com otimização
             if ('IntersectionObserver' in window) {
                 const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
@@ -292,4 +370,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -50,6 +50,7 @@
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
             will-change: opacity, transform;
+            /* Otimização de renderização */
         }
 
         .fade-in.is-visible {
@@ -270,7 +271,7 @@
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
                         <h3 class="font-serif text-2xl font-bold text-white mb-2">Endolift</h3>
                         <p
-                            class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            class="text-offwhite/90 transition-all duration-300 transform md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                             O procedimento minimamente invasivo ideal para resolver problemas de gordura localizada,
                             papada e flacidez.</p>
                     </div>
@@ -282,7 +283,7 @@
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
                         <h3 class="font-serif text-2xl font-bold text-white mb-2">Bioestimuladores</h3>
                         <p
-                            class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            class="text-offwhite/90 transition-all duration-300 transform md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                             Estímulo profundo de colágeno para combater a flacidez e devolver a firmeza da pele facial e
                             corporal.</p>
                     </div>
@@ -294,7 +295,7 @@
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
                         <h3 class="font-serif text-2xl font-bold text-white mb-2">Procedimentos Estéticos</h3>
                         <p
-                            class="text-offwhite/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            class="text-offwhite/90 transition-all duration-300 transform md:opacity-0 md:translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                             Seja através de harmonização facial ou outros tratamentos modernos para uma aparência
                             satisfatória.</p>
                     </div>
@@ -400,14 +401,14 @@
                 mobileMenu.classList.toggle('opacity-0');
                 mobileMenu.classList.toggle('pointer-events-none');
                 mobileMenu.classList.toggle('-translate-y-full');
-                document.body.classList.toggle('overflow-hidden');
+                document.body.classList.toggle('overflow-hidden'); // Evita rolagem de tela com o menu aberto
             }
 
             mobileBtn.addEventListener('click', toggleMenu);
             closeBtn.addEventListener('click', toggleMenu);
 
             mobileLinks.forEach(link => {
-                link.addEventListener('click', toggleMenu);
+                link.addEventListener('click', toggleMenu); // Fecha menu ao clicar num link
             });
         });
     </script>

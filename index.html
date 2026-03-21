@@ -14,7 +14,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -65,6 +65,12 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #5D433A;
         }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
     </style>
 </head>
 
@@ -96,22 +102,31 @@
         </div>
     </header>
 
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-offwhite/95 backdrop-blur-xl flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 ease-in-out transform -translate-y-full">
-        <button id="close-btn" class="absolute top-6 right-6 text-brown focus:outline-none p-2" aria-label="Fechar menu">
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[60] bg-offwhite/95 backdrop-blur-xl flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 ease-in-out transform -translate-y-full">
+        <button id="close-btn" class="absolute top-6 right-6 text-brown focus:outline-none p-2"
+            aria-label="Fechar menu">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
         <nav class="flex flex-col space-y-8 text-center">
-            <a href="#sobre" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Sobre Mim</a>
-            <a href="#tratamentos" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Tratamentos</a>
-            <a href="#resultados" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Resultados</a>
-            <a href="#contato" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Contato</a>
-            <a href="#contato" class="mobile-link mt-8 inline-block bg-rose text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">Agendar Consulta</a>
+            <a href="#sobre" class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Sobre
+                Mim</a>
+            <a href="#tratamentos"
+                class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Tratamentos</a>
+            <a href="#resultados"
+                class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Resultados</a>
+            <a href="#contato"
+                class="mobile-link font-serif text-3xl text-brown hover:text-rose transition-colors">Contato</a>
+            <a href="#contato"
+                class="mobile-link mt-8 inline-block bg-rose text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">Agendar
+                Consulta</a>
         </nav>
     </div>
 
-    <section class="relative min-h-screen flex items-center justify-center text-center px-4 md:px-6 pt-28 pb-10 md:pt-20 md:pb-0">
+    <section
+        class="relative min-h-screen flex items-center justify-center text-center px-4 md:px-6 pt-28 pb-10 md:pt-20 md:pb-0">
         <div class="absolute inset-0 z-0 bg-brown/20">
             <img src="img/hero-clinica.webp" alt="Interior de Clínica de Estética Premium - Clínica Revitalize"
                 class="w-full h-full object-cover" />
@@ -119,11 +134,15 @@
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
-            <span class="text-rose font-semibold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4 block">Especialista em Estética
+            <span
+                class="text-rose font-semibold tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4 block">Especialista
+                em Estética
                 Avançada</span>
-            <h1 class="font-serif text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">Descubra o método que transformou o
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">Descubra o
+                método que transformou o
                 corpo das minhas pacientes em poucas sessões, sem dor e sem cortes.</h1>
-            <p class="text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto text-brown/90 font-medium px-2 md:px-0">Perfeito para quem deseja
+            <p class="text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto text-brown/90 font-medium px-2 md:px-0">
+                Perfeito para quem deseja
                 perder peso, eliminar a papada, diminuir flacidez e gordura localizada.</p>
             <a href="#contato"
                 class="inline-block bg-rose text-white px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg font-medium hover:bg-brown transition-colors duration-300 shadow-lg">
@@ -135,7 +154,8 @@
     <section class="py-20 px-6 bg-rose/10">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-rose">Seu corpo já não é mais o mesmo há tempos?
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-rose">Seu corpo já não é mais o mesmo há
+                    tempos?
                 </h2>
                 <p class="text-brown/70 max-w-2xl mx-auto">Esses desafios podem afetar não apenas sua aparência, mas
                     também sua autoestima e bem-estar. Veja se você se identifica com algum desses pontos:</p>
@@ -225,21 +245,25 @@
                     nossas pacientes.</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="aspect-square bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.pexels.com/photos/3985324/pexels-photo-3985324.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Estética" loading="lazy"
-                        class="w-full h-full object-cover">
+                <div class="aspect-square bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="https://images.pexels.com/photos/3985324/pexels-photo-3985324.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Estética" loading="lazy" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bem estar" loading="lazy"
-                        class="w-full h-full object-cover">
+                <div class="aspect-square bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Bem estar" loading="lazy" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cuidado" loading="lazy"
-                        class="w-full h-full object-cover">
+                <div class="aspect-square bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="zoom-in"
+                    data-aos-delay="300">
+                    <img src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Cuidado" loading="lazy" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://images.pexels.com/photos/3985299/pexels-photo-3985299.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Clínica" loading="lazy"
-                        class="w-full h-full object-cover">
+                <div class="aspect-square bg-white rounded-2xl overflow-hidden shadow-sm" data-aos="zoom-in"
+                    data-aos-delay="400">
+                    <img src="https://images.pexels.com/photos/3985299/pexels-photo-3985299.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Clínica" loading="lazy" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -248,15 +272,18 @@
     <section id="tratamentos" class="py-20 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-rose">Tratamentos personalizados para realçar a sua
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-rose">Tratamentos personalizados para
+                    realçar a sua
                     beleza</h2>
                 <p class="text-brown/70 max-w-2xl mx-auto">Soluções inovadoras e seguras para tratar gordura localizada
                     e flacidez.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10 shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.pexels.com/photos/3985330/pexels-photo-3985330.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tecnologia" loading="lazy"
+                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10 shadow-lg"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.pexels.com/photos/3985330/pexels-photo-3985330.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Tecnologia" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
@@ -267,8 +294,10 @@
                             papada e flacidez.</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10 shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/3762467/pexels-photo-3762467.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Natureza e Spa" loading="lazy"
+                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10 shadow-lg"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.pexels.com/photos/3762467/pexels-photo-3762467.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Natureza e Spa" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
@@ -279,8 +308,10 @@
                             corporal.</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10 shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Luxo" loading="lazy"
+                <div class="group relative overflow-hidden rounded-3xl aspect-[4/5] bg-brown/10 shadow-lg"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Luxo" loading="lazy"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-brown/95 via-brown/40 to-transparent flex flex-col justify-end p-8">
@@ -358,7 +389,9 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5531999999999" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:scale-110 transition-all z-[100]" aria-label="Fale conosco no WhatsApp">
+    <a href="https://wa.me/5531999999999" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] hover:scale-110 transition-all z-[100]"
+        aria-label="Fale conosco no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -366,7 +399,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            
+
             // Inicializando o AOS no lugar do observador antigo
             AOS.init({
                 once: true,
